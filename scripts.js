@@ -1,4 +1,6 @@
-﻿/* global document */
+/* global document */
+
+const WHATSAPP_NUMBER = '5511967969322';
 
 const content = {
   categories: ['Todos', 'Casacos', 'Bonés', 'Lançamentos'],
@@ -109,6 +111,10 @@ const content = {
 };
 
 let activeCategory = 'Todos';
+
+function buildWhatsAppUrl(message) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+}
 
 function renderCategoryNav() {
   const container = document.getElementById('category-nav');
@@ -336,7 +342,7 @@ function openProductModal(productId) {
   combine.innerHTML = product.combine.map((item) => `<div class="combine-item">${item}</div>`).join('');
 
   const message = encodeURIComponent(`Olá, tenho interesse no produto: ${product.title}`);
-  cta.href = `https://wa.me/?text=${message}`;
+  cta.href = buildWhatsAppUrl(message);
 
   modal.classList.add('open');
   modal.setAttribute('aria-hidden', 'false');
@@ -372,7 +378,7 @@ function setupCtaLink() {
 
   links.forEach((link) => {
     if (!link) return;
-    link.href = `https://wa.me/?text=${message}`;
+    link.href = buildWhatsAppUrl(message);
   });
 }
 
@@ -394,4 +400,3 @@ renderMarquee();
 setupModalClose();
 setupCtaLink();
 setYear();
-
