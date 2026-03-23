@@ -36,6 +36,20 @@ const content = {
       ],
     },
     {
+      id: 'relogio-winner',
+      category: 'Lançamentos',
+      title: 'Relógio Winner Black',
+      summary: 'Em Breve: acessório premium para completar o visual com presença e atitude.',
+      description:
+        'Relógio Dom Winner em desenvolvimento com identidade urbana e acabamento elegante para elevar o estilo no dia a dia.',
+      details: ['Em Breve', 'Design premium', 'Lista de espera no WhatsApp'],
+      combine: ['Casaco Winner Black', 'Boné Winner Black'],
+      comingSoon: true,
+      media: [
+        { type: 'image', src: 'assets/produto-relogio.webp', alt: 'Relógio Dom Winner - visão do produto' },
+      ],
+    },
+    {
       id: 'linha-dom-winner',
       category: 'Lançamentos',
       title: 'Linha Dom Winner',
@@ -150,6 +164,7 @@ function renderProducts() {
     .map(
       (item) => `
       <article class="product-card" data-product-id="${item.id}">
+        ${item.comingSoon ? '<span class="product-badge">Em Breve</span>' : ''}
         <img src="${item.media[0].src}" alt="${item.media[0].alt}" />
         <div class="product-info">
           <h3>${item.title}</h3>
@@ -341,7 +356,11 @@ function openProductModal(productId) {
   details.innerHTML = product.details.map((item) => `<li>${item}</li>`).join('');
   combine.innerHTML = product.combine.map((item) => `<div class="combine-item">${item}</div>`).join('');
 
-  const message = encodeURIComponent(`Olá, tenho interesse no produto: ${product.title}`);
+  const baseMessage = product.comingSoon
+    ? `Olá, quero entrar na lista de espera do produto: ${product.title}`
+    : `Olá, tenho interesse no produto: ${product.title}`;
+  const message = encodeURIComponent(baseMessage);
+  cta.textContent = product.comingSoon ? 'Entrar na lista de espera' : 'Pedir no WhatsApp';
   cta.href = buildWhatsAppUrl(message);
 
   modal.classList.add('open');
