@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jaqueta Winner Black | Dom Winner</title>
+    <meta
+      name="description"
+      content="Jaqueta Winner Black da Dom Winner: visual premium, conforto térmico e presença para o dia a dia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #060606;
+        --bg-soft: #121212;
+        --text: #ededed;
+        --muted: #8e8e8e;
+        --line: #2a2a2a;
+        --white: #ffffff;
+        --accent: #d9b36a;
+        --accent-soft: #b99757;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: "Manrope", "Segoe UI", sans-serif;
+      }
+
+      .container {
+        width: min(1120px, 92vw);
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        border-bottom: 1px solid var(--line);
+        background: rgba(7, 7, 7, 0.88);
+        backdrop-filter: blur(8px);
+      }
+
+      .topbar-inner {
+        min-height: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand {
+        text-decoration: none;
+        color: var(--white);
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.06em;
+        font-size: 1.35rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        padding: 0.74rem 1.08rem;
+        font-weight: 800;
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.11em;
+      }
+
+      .btn-light {
+        background: linear-gradient(135deg, var(--accent) 0%, #f0d9a9 100%);
+        color: #080808;
+        box-shadow: 0 10px 24px rgba(217, 179, 106, 0.28);
+      }
+
+      .btn-ghost {
+        border-color: var(--line);
+        color: var(--text);
+        background: linear-gradient(135deg, rgba(217, 179, 106, 0.14), rgba(217, 179, 106, 0.03));
+      }
+
+      .hero {
+        padding: 2rem 0 1.5rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .kicker {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.68rem;
+        color: var(--accent);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        font-family: "Bebas Neue", sans-serif;
+        letter-spacing: 0.02em;
+      }
+
+      h1 {
+        margin-top: 0.35rem;
+        font-size: clamp(2rem, 6.2vw, 4rem);
+        line-height: 1.02;
+      }
+
+      .lead {
+        margin-top: 0.7rem;
+        max-width: 48ch;
+        color: #d6d6d6;
+      }
+
+      .hero-actions {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.64rem;
+      }
+
+      .hero-media {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        background: var(--bg-soft);
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.38);
+      }
+
+      .hero-media img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .section {
+        padding: 0.7rem 0 0.6rem;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .block {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 1rem;
+        background: rgba(18, 18, 18, 0.78);
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.68rem;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.68rem;
+      }
+
+      .item {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 0.74rem;
+        background: rgba(217, 179, 106, 0.03);
+      }
+
+      .item p {
+        margin: 0.34rem 0 0;
+        color: var(--muted);
+      }
+
+      .gallery img {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        width: 100%;
+        display: block;
+        background: #090909;
+      }
+
+      .specs {
+        margin: 0.56rem 0 0;
+        padding-left: 1rem;
+        color: var(--muted);
+      }
+
+      .specs li {
+        margin: 0.28rem 0;
+      }
+
+      .cta {
+        text-align: center;
+      }
+
+      .cta h2 {
+        font-size: clamp(1.8rem, 5vw, 3rem);
+      }
+
+      .cta p {
+        color: var(--muted);
+        max-width: 58ch;
+        margin: 0.55rem auto 0;
+      }
+
+      .cta .btn {
+        margin-top: 0.9rem;
+      }
+
+      .whatsapp-number {
+        margin-top: 0.7rem;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .whatsapp-number a {
+        color: var(--accent);
+      }
+
+      .footer {
+        padding: 1rem 0 2rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 920px) {
+        .hero-grid,
+        .grid-3,
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="./index.html">DOM WINNER</a>
+        <a
+          class="btn btn-ghost"
+          href="https://wa.me/5511967969322?text=Olá%2C%20quero%20saber%20mais%20sobre%20a%20Jaqueta%20Winner%20Black."
+          target="_blank"
+          rel="noopener noreferrer"
+          >Falar no WhatsApp</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="kicker">Drop Premium Dom Winner</p>
+            <h1>Jaqueta Winner Black</h1>
+            <p class="lead">
+              A jaqueta para quem quer presença, conforto térmico e estilo forte em qualquer ambiente.
+              Um visual premium para elevar confiança no dia a dia.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-light"
+                href="https://wa.me/5511967969322?text=Olá%2C%20quero%20pedir%20a%20Jaqueta%20Winner%20Black."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Quero Minha Jaqueta</a
+              >
+              <a class="btn btn-ghost" href="#detalhes">Ver Detalhes</a>
+              <a class="btn btn-ghost" href="./index.html">Ver Loja Completa</a>
+            </div>
+          </div>
+          <div class="hero-media">
+            <img src="assets/produto-casaco.webp" alt="Jaqueta Winner Black Dom Winner" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container block">
+          <h2>Por que essa jaqueta se destaca</h2>
+          <div class="grid-3">
+            <article class="item">
+              <h3>Presença visual</h3>
+              <p>Modelagem e acabamento para transmitir atitude premium.</p>
+            </article>
+            <article class="item">
+              <h3>Conforto térmico</h3>
+              <p>Pensada para uso diário com conforto e segurança no vestir.</p>
+            </article>
+            <article class="item">
+              <h3>Identidade forte</h3>
+              <p>Peça versátil para combinar com teu estilo e elevar autoestima.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="detalhes" class="section">
+        <div class="container block">
+          <h2>Como ela veste no corpo</h2>
+          <div class="grid-2 gallery">
+            <img src="assets/modelo-homem-casaco.webp" alt="Modelo masculino usando a Jaqueta Winner Black" />
+            <img src="assets/modelo-mulher-casaco.webp" alt="Modelo feminina usando a Jaqueta Winner Black" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container block">
+          <h2>Informações rápidas</h2>
+          <ul class="specs">
+            <li>Envio para todo o Brasil</li>
+            <li>Tamanhos sob consulta no atendimento</li>
+            <li>Atendimento direto no WhatsApp oficial da Dom Winner</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container block cta">
+          <h2>Pronto para vestir sua versão vencedora?</h2>
+          <p>
+            Fala com a Dom Winner agora e garante tua Jaqueta Winner Black com atendimento direto.
+          </p>
+          <a
+            class="btn btn-light"
+            href="https://wa.me/5511967969322?text=Olá%2C%20quero%20fechar%20a%20Jaqueta%20Winner%20Black."
+            target="_blank"
+            rel="noopener noreferrer"
+            >Pedir no WhatsApp</a
+          >
+          <a class="btn btn-ghost" href="./index.html" style="margin-top: 0.6rem">Ir para a Loja Completa</a>
+          <p class="whatsapp-number">
+            WhatsApp oficial:
+            <a href="https://wa.me/5511967969322" target="_blank" rel="noopener noreferrer"
+              >+55 11 96796-9322</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">DOM WINNER <span id="year"></span></div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
