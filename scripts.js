@@ -64,7 +64,6 @@ const content = {
       ],
     },
   ],
-  looks: ['Midnight Set', 'Urban Formal', 'Core Drop'],
   metrics: [
     { value: 'Confiança', label: 'como sensação principal' },
     { value: 'Autoestima', label: 'como efeito da marca' },
@@ -181,21 +180,6 @@ function renderProducts() {
       openProductModal(productId);
     });
   });
-}
-
-function renderLookbook() {
-  const container = document.getElementById('lookbook');
-  if (!container) return;
-
-  container.innerHTML = content.looks
-    .map(
-      (item) => `
-      <article class="look">
-        <span>${item}</span>
-      </article>
-    `,
-    )
-    .join('');
 }
 
 function renderMetrics() {
@@ -409,7 +393,6 @@ function setYear() {
 
 renderCategoryNav();
 renderProducts();
-renderLookbook();
 renderMetrics();
 renderBenefits();
 renderTrustPoints();
