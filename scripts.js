@@ -1,63 +1,63 @@
-/* global document */
+﻿/* global document */
 
 const WHATSAPP_NUMBER = '5511967969322';
 
 const content = {
-  categories: ['Todos', 'Casacos', 'Bonés', 'Lançamentos'],
+  categories: ['Todos', 'Jaquetas', 'BonÃ©s', 'LanÃ§amentos'],
   products: [
     {
       id: 'casaco-winner',
-      category: 'Casacos',
-      title: 'Casaco Winner Black',
-      summary: 'Conforto térmico com visual premium para o dia a dia.',
+      category: 'Jaquetas',
+      title: 'Jaqueta Winner Black',
+      summary: 'Conforto tÃ©rmico com visual premium para o dia a dia.',
       description:
-        'Casaco com foco em conforto, presença e autoestima. Ideal para quem quer uma peça versátil com identidade forte.',
+        'Jaqueta com foco em conforto, presenÃ§a e autoestima. Ideal para quem quer uma peÃ§a versÃ¡til com identidade forte.',
       details: ['Envio para todo o Brasil', 'Tamanhos sob consulta', 'Atendimento direto no WhatsApp'],
-      combine: ['Boné Winner Black', 'Camiseta Essential Black'],
+      combine: ['BonÃ© Winner Black', 'Camiseta Essential Black'],
       media: [
-        { type: 'image', src: 'assets/produto-casaco.webp', alt: 'Casaco Dom Winner - visão do produto' },
-        { type: 'image', src: 'assets/modelo-homem-casaco.webp', alt: 'Modelo masculino usando o casaco Dom Winner' },
-        { type: 'image', src: 'assets/modelo-mulher-casaco.webp', alt: 'Modelo feminina usando o casaco Dom Winner' },
+        { type: 'image', src: 'assets/produto-casaco.webp', alt: 'Jaqueta Dom Winner - visÃ£o do produto' },
+        { type: 'image', src: 'assets/modelo-homem-casaco.webp', alt: 'Modelo masculino usando a jaqueta Dom Winner' },
+        { type: 'image', src: 'assets/modelo-mulher-casaco.webp', alt: 'Modelo feminina usando a jaqueta Dom Winner' },
       ],
     },
     {
       id: 'bone-winner',
-      category: 'Bonés',
-      title: 'Boné Winner Black',
+      category: 'BonÃ©s',
+      title: 'BonÃ© Winner Black',
       summary: 'Estilo urbano com acabamento premium e assinatura da marca.',
       description:
-        'Boné preto com logo em destaque para completar o visual com atitude. Modelo pensado para uso diário e combinações versáteis.',
+        'BonÃ© preto com logo em destaque para completar o visual com atitude. Modelo pensado para uso diÃ¡rio e combinaÃ§Ãµes versÃ¡teis.',
       details: ['Envio para todo o Brasil', 'Ajuste traseiro', 'Acabamento premium'],
-      combine: ['Casaco Winner Black', 'Linha Dom Winner'],
+      combine: ['Jaqueta Winner Black', 'Linha Dom Winner'],
       media: [
-        { type: 'image', src: 'assets/produto-bone.webp', alt: 'Boné Dom Winner - visão do produto' },
-        { type: 'image', src: 'assets/modelo-homem-bone.webp', alt: 'Modelo masculino usando o boné Dom Winner' },
-        { type: 'image', src: 'assets/modelo-mulher-bone.webp', alt: 'Modelo feminina usando o boné Dom Winner' },
+        { type: 'image', src: 'assets/produto-bone.webp', alt: 'BonÃ© Dom Winner - visÃ£o do produto' },
+        { type: 'image', src: 'assets/modelo-homem-bone.webp', alt: 'Modelo masculino usando o bonÃ© Dom Winner' },
+        { type: 'image', src: 'assets/modelo-mulher-bone.webp', alt: 'Modelo feminina usando o bonÃ© Dom Winner' },
       ],
     },
     {
       id: 'relogio-winner',
-      category: 'Lançamentos',
-      title: 'Relógio Winner Black',
-      summary: 'Em Breve: acessório premium para completar o visual com presença e atitude.',
+      category: 'LanÃ§amentos',
+      title: 'RelÃ³gio Winner Black',
+      summary: 'Em Breve: acessÃ³rio premium para completar o visual com presenÃ§a e atitude.',
       description:
-        'Relógio Dom Winner em desenvolvimento com identidade urbana e acabamento elegante para elevar o estilo no dia a dia.',
+        'RelÃ³gio Dom Winner em desenvolvimento com identidade urbana e acabamento elegante para elevar o estilo no dia a dia.',
       details: ['Em Breve', 'Design premium', 'Lista de espera no WhatsApp'],
-      combine: ['Casaco Winner Black', 'Boné Winner Black'],
+      combine: ['Jaqueta Winner Black', 'BonÃ© Winner Black'],
       comingSoon: true,
       media: [
-        { type: 'image', src: 'assets/produto-relogio.webp', alt: 'Relógio Dom Winner - visão do produto' },
+        { type: 'image', src: 'assets/produto-relogio.webp', alt: 'RelÃ³gio Dom Winner - visÃ£o do produto' },
       ],
     },
     {
       id: 'linha-dom-winner',
-      category: 'Lançamentos',
+      category: 'LanÃ§amentos',
       title: 'Linha Dom Winner',
-      summary: 'Peças criadas para transmitir confiança, conforto e autoestima.',
+      summary: 'PeÃ§as criadas para transmitir confianÃ§a, conforto e autoestima.',
       description:
-        'Coleção focada no público brasileiro, com linguagem visual premium para destacar o produto e fortalecer a identidade da marca.',
-      details: ['Coleção em evolução', 'Drops semanais', 'Atendimento consultivo'],
-      combine: ['Boné Winner Black', 'Casaco Winner Black'],
+        'ColeÃ§Ã£o focada no pÃºblico brasileiro, com linguagem visual premium para destacar o produto e fortalecer a identidade da marca.',
+      details: ['ColeÃ§Ã£o em evoluÃ§Ã£o', 'Drops semanais', 'Atendimento consultivo'],
+      combine: ['BonÃ© Winner Black', 'Jaqueta Winner Black'],
       media: [
         { type: 'image', src: 'assets/logo-claim.jpeg', alt: 'A marca dos vencedores' },
         { type: 'image', src: 'assets/logo-main.jpeg', alt: 'Assinatura oficial da marca Dom Winner' },
@@ -65,10 +65,10 @@ const content = {
     },
   ],
   metrics: [
-    { value: 'Confiança', label: 'como sensação principal' },
+    { value: 'ConfianÃ§a', label: 'como sensaÃ§Ã£o principal' },
     { value: 'Autoestima', label: 'como efeito da marca' },
-    { value: 'Conforto', label: 'como base de uso diário' },
-    { value: 'Brasil', label: 'vendas focadas no país' },
+    { value: 'Conforto', label: 'como base de uso diÃ¡rio' },
+    { value: 'Brasil', label: 'vendas focadas no paÃ­s' },
   ],
   benefits: [
     {
@@ -77,31 +77,31 @@ const content = {
     },
     {
       title: 'Identidade Forte',
-      description: 'Visual premium com linguagem de marca clara, forte e memorável.',
+      description: 'Visual premium com linguagem de marca clara, forte e memorÃ¡vel.',
     },
     {
-      title: 'Conforto + Presença',
-      description: 'Peças feitas para vestir bem e sustentar confiança em qualquer ambiente.',
+      title: 'Conforto + PresenÃ§a',
+      description: 'PeÃ§as feitas para vestir bem e sustentar confianÃ§a em qualquer ambiente.',
     },
     {
       title: 'Atendimento Direto',
-      description: 'Contato rápido para apresentar modelos, tamanhos e condições.',
+      description: 'Contato rÃ¡pido para apresentar modelos, tamanhos e condiÃ§Ãµes.',
     },
   ],
   trustPoints: [
     { title: 'Envio Brasil', text: 'Atendimento e vendas para todo o Brasil.' },
     { title: 'Pagamento seguro', text: 'Fluxo de compra com suporte no WhatsApp.' },
-    { title: 'Troca facilitada', text: 'Política de troca alinhada no atendimento.' },
+    { title: 'Troca facilitada', text: 'PolÃ­tica de troca alinhada no atendimento.' },
     { title: 'Suporte humano', text: 'Atendimento real para ajudar na escolha.' },
   ],
   drop: {
     main: {
       title: 'Drop Black Confidence',
-      text: 'Lote especial com peças premium para elevar presença e autoestima no dia a dia.',
+      text: 'Lote especial com peÃ§as premium para elevar presenÃ§a e autoestima no dia a dia.',
     },
     side: {
-      title: 'Próximo drop',
-      text: 'Chame no WhatsApp para garantir seu acesso aos próximos lançamentos.',
+      title: 'PrÃ³ximo drop',
+      text: 'Chame no WhatsApp para garantir seu acesso aos prÃ³ximos lanÃ§amentos.',
     },
   },
   testimonials: [
@@ -113,12 +113,12 @@ const content = {
     {
       title: 'Qualidade surpreendente',
       description:
-        'O acabamento e o caimento passam muita confiança. Parece uma marca muito maior.',
+        'O acabamento e o caimento passam muita confianÃ§a. Parece uma marca muito maior.',
     },
     {
       title: 'Compra simples',
       description:
-        'Fui atendido rápido no WhatsApp e recebi exatamente o que estava procurando.',
+        'Fui atendido rÃ¡pido no WhatsApp e recebi exatamente o que estava procurando.',
     },
   ],
 };
@@ -296,7 +296,7 @@ function renderModalGallery(mediaItems) {
                 ? `<video muted playsinline src="${item.src}" aria-hidden="true"></video>`
                 : `<img src="${item.src}" alt="${item.alt || 'Miniatura do produto'}" />`;
             return `
-              <button type="button" class="thumb-btn ${index === activeIndex ? 'active' : ''}" data-thumb-index="${index}" aria-label="Ver mídia ${index + 1}">
+              <button type="button" class="thumb-btn ${index === activeIndex ? 'active' : ''}" data-thumb-index="${index}" aria-label="Ver mÃ­dia ${index + 1}">
                 ${thumbInner}
               </button>
             `;
@@ -341,8 +341,8 @@ function openProductModal(productId) {
   combine.innerHTML = product.combine.map((item) => `<div class="combine-item">${item}</div>`).join('');
 
   const baseMessage = product.comingSoon
-    ? `Olá, quero entrar na lista de espera do produto: ${product.title}`
-    : `Olá, tenho interesse no produto: ${product.title}`;
+    ? `OlÃ¡, quero entrar na lista de espera do produto: ${product.title}`
+    : `OlÃ¡, tenho interesse no produto: ${product.title}`;
   const message = encodeURIComponent(baseMessage);
   cta.textContent = product.comingSoon ? 'Entrar na lista de espera' : 'Pedir no WhatsApp';
   cta.href = buildWhatsAppUrl(message);
@@ -377,7 +377,7 @@ function setupModalClose() {
 
 function setupCtaLink() {
   const links = [document.getElementById('cta-link'), document.getElementById('floating-cta')];
-  const message = encodeURIComponent('Olá, quero conhecer os produtos da Dom Winner.');
+  const message = encodeURIComponent('OlÃ¡, quero conhecer os produtos da Dom Winner.');
 
   links.forEach((link) => {
     if (!link) return;
@@ -402,3 +402,5 @@ renderMarquee();
 setupModalClose();
 setupCtaLink();
 setYear();
+
+
