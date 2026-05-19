@@ -1,93 +1,220 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dom Winner | Streetwear Premium</title>
+    <title>Dom Winner | Streetwear Premium Brasileiro</title>
     <meta
       name="description"
-      content="Dom Winner: marca de roupa com identidade forte, visual premium e atitude."
+      content="Dom Winner: streetwear premium para quem decidiu vencer. Jaquetas, bonés, meias e acessórios com identidade forte e atendimento direto."
     />
-    <link rel="icon" type="image/jpeg" href="./assets/logo-round.jpeg?v=1" />
-    <link rel="shortcut icon" href="./assets/logo-round.jpeg?v=1" />
-    <link rel="apple-touch-icon" href="./assets/logo-round.jpeg?v=1" />
+    <meta name="theme-color" content="#060606" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Dom Winner · Streetwear Premium" />
+    <meta property="og:description" content="Visual premium para quem decidiu vencer. Jaquetas, bonés, meias e mais." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/jpeg" href="./assets/logo-round.jpeg?v=2" />
+    <link rel="shortcut icon" href="./assets/logo-round.jpeg?v=2" />
+    <link rel="apple-touch-icon" href="./assets/logo-round.jpeg?v=2" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
   </head>
   <body>
+    <!-- ===== ANNOUNCEMENT BAR (escassez/urgência) ===== -->
+    <div class="announce" id="announce-bar">
+      <div class="container announce-inner">
+        <span class="announce-dot" aria-hidden="true"></span>
+        <span class="announce-text">
+          <strong>Drop Black Confidence ativo</strong> · termina em
+          <span id="countdown" class="announce-countdown">--d --:--:--</span>
+          · entrega em todo o Brasil
+        </span>
+      </div>
+    </div>
+
+    <!-- ===== TOPBAR ===== -->
     <header class="topbar">
       <div class="container nav">
         <a href="#topo" class="brand" aria-label="Dom Winner">
-          <img src="assets/logo-main.jpeg" alt="Dom Winner" />
+          <img src="assets/logo-main.jpeg" alt="Dom Winner" width="36" height="36" />
           <span>DOM WINNER</span>
         </a>
         <nav class="menu" aria-label="Principal">
-          <a href="#produtos">Ver produtos</a>
-          <a href="#sobre">Sobre a marca</a>
-          <a href="#contato">Contato</a>
+          <a href="#origem">A origem</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#combos">Combos</a>
+          <a href="#garantia">Garantia</a>
         </nav>
+        <a class="topbar-cta" href="#contato">Falar agora</a>
       </div>
     </header>
 
     <main id="topo">
+      <!-- ===== HERO (Kennedy direct response) ===== -->
       <section class="hero">
         <div class="grid-overlay"></div>
         <div class="spot spot-a"></div>
         <div class="spot spot-b"></div>
         <div class="container hero-content">
-          <p class="kicker">Streetwear premium</p>
-          <h1>Vista a sua versão vencedora.</h1>
+          <p class="kicker">Streetwear premium · Brasil</p>
+          <h1>
+            Vista o uniforme<br />
+            de quem <em>decidiu vencer.</em>
+          </h1>
           <p class="lead">
-            A Dom Winner nasceu para ativar o dom de vencer de cada pessoa com roupas que transmitem confiança, autoestima e conforto.
+            Dom Winner é a marca para quem precisa de uma roupa que <strong>fale antes de você falar</strong>.
+            Atitude no acabamento, presença no corpo, identidade que não passa despercebida.
           </p>
           <div class="actions">
-            <a href="#contato" class="btn btn-light">Quero minha peça</a>
-            <a href="#produtos" class="btn btn-ghost">Ver produtos</a>
+            <a href="#produtos" class="btn btn-light">Ver produtos</a>
+            <a href="#origem" class="btn btn-ghost">Por que Dom Winner</a>
           </div>
+          <ul class="hero-pills" aria-hidden="true">
+            <li>✓ Envio Brasil</li>
+            <li>✓ 7 dias troca</li>
+            <li>✓ Atendimento humano</li>
+          </ul>
         </div>
       </section>
 
+      <!-- ===== MARQUEE ===== -->
       <section class="marquee-section">
         <div class="marquee-track" id="marquee"></div>
       </section>
 
+      <!-- ===== TRUST STRIP ===== -->
+      <section class="section trust-strip">
+        <div class="container trust-grid" id="trust-points"></div>
+      </section>
+
+      <!-- ===== ORIGEM (Godin storytelling + Belfort) ===== -->
+      <section id="origem" class="section section--origem">
+        <div class="container origem-grid">
+          <div class="origem-copy">
+            <p class="kicker">A origem</p>
+            <h2>
+              A marca não nasceu para todo mundo.<br />
+              <em>Nasceu para quem se cansou de ser</em> "o mediano".
+            </h2>
+            <div class="origem-paragraphs">
+              <p>
+                Dom Winner começou pela inquietação de quem foi rotulado como
+                <strong>aquele que não vai conseguir</strong>. Quem ouviu que era ambição demais.
+                Que tinha que se acomodar.
+              </p>
+              <p>
+                A marca é uma resposta a essa voz interna que diz <em>"não é pra você"</em>.
+                Cada peça é um lembrete <strong>físico</strong> de que tem o dom — e que dom não pede licença.
+              </p>
+              <p>
+                Não é roupa pra impressionar. É roupa pra <strong>te lembrar quem você é</strong>
+                antes de entrar em qualquer ambiente.
+              </p>
+            </div>
+            <div class="origem-quote">
+              <p>"Vencer não é circunstância. É decisão."</p>
+              <span>— Manifesto Dom Winner</span>
+            </div>
+          </div>
+          <div class="origem-visual">
+            <img src="assets/logo-claim.jpeg" alt="A marca dos vencedores" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PRODUTOS (Hormozi clarity + preços visíveis) ===== -->
       <section id="produtos" class="section">
         <div class="container">
           <div class="section-head">
-            <p class="kicker">Marketplace Dom Winner</p>
-            <h2>Ver produtos</h2>
+            <p class="kicker">Coleção atual</p>
+            <h2>Cada peça com nome, preço e estoque visíveis.</h2>
+            <p class="section-lead">Sem mistério. Você vê, escolhe, e pede direto pelo WhatsApp.</p>
           </div>
-          <p class="proof-note">
-            Clique em um produto para ver fotos e vídeos de como ele fica no corpo.
-          </p>
           <div class="category-nav" id="category-nav"></div>
           <div class="product-grid" id="products"></div>
         </div>
       </section>
 
-      <section class="section trust-strip">
-        <div class="container trust-grid" id="trust-points"></div>
-      </section>
-
-      <section id="sobre" class="section alt">
-        <div class="container manifesto">
-          <p class="kicker">Sobre a marca</p>
-          <h2>Dom Winner não é só roupa. É o dom de vencer.</h2>
-          <p>
-            Queremos mostrar para cada cliente que ele pode vencer em qualquer ambiente. Cada peça une atitude visual, conforto de uso e identidade forte para elevar confiança e autoestima.
-          </p>
+      <!-- ===== COMBOS (Hormozi value stack) ===== -->
+      <section id="combos" class="section section--combos">
+        <div class="container">
+          <div class="section-head">
+            <p class="kicker">Combos com desconto</p>
+            <h2>
+              Levou em <em>kit</em>, paga menos.<br />
+              Apareceu mais.
+            </h2>
+            <p class="section-lead">
+              Selecionamos as combinações que mais funcionam no corpo, com desconto real frente ao preço unitário.
+            </p>
+          </div>
+          <div class="combos-grid" id="combos"></div>
         </div>
       </section>
 
+      <!-- ===== GARANTIA (Hormozi reversal) ===== -->
+      <section id="garantia" class="section section--garantia">
+        <div class="container garantia-card">
+          <div class="garantia-seal" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <polyline points="9 12 11 14 15 10"/>
+            </svg>
+          </div>
+          <p class="kicker">Garantia 7 dias</p>
+          <h2>Se não vestiu como você imaginou, devolvemos cada centavo.</h2>
+          <p>
+            Você tem <strong>7 dias corridos</strong> a partir do recebimento para trocar ou devolver
+            sem precisar justificar. Sem formulário, sem pergunta, sem julgamento. Só falar com a gente.
+          </p>
+          <ul class="garantia-points">
+            <li>✓ Sem custo de envio do retorno</li>
+            <li>✓ Reembolso integral em até 5 dias úteis</li>
+            <li>✓ Atendimento humano via WhatsApp</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===== FOUNDER (Belfort - certeza no autor) ===== -->
+      <section id="founder" class="section section--founder">
+        <div class="container founder-grid">
+          <div class="founder-photo" aria-hidden="true">
+            <div class="founder-photo-placeholder">
+              <span>Foto do fundador</span>
+              <small>Adicione em /assets/founder.webp</small>
+            </div>
+          </div>
+          <div class="founder-copy">
+            <p class="kicker">Quem está por trás</p>
+            <h2>Não é uma marca corporativa.<br /><em>É um projeto pessoal.</em></h2>
+            <p>
+              Dom Winner é tocada por <strong>uma pessoa real</strong> — não um time de marketing distante.
+              Cada peça é escolhida, testada e aprovada antes de chegar em você. Cada cliente atendido pessoalmente.
+            </p>
+            <p>
+              Se algo não estiver certo, você fala diretamente com o fundador, não com um chatbot.
+              Essa é a diferença de comprar de uma marca pessoal vs. de uma corporação anônima.
+            </p>
+            <a class="btn btn-ghost btn-sm" href="https://wa.me/5511967969322?text=Olá%2C%20quero%20conversar%20com%20o%20fundador%20da%20Dom%20Winner." target="_blank" rel="noopener">
+              Falar diretamente →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== METRICS ===== -->
       <section class="section metrics">
         <div class="container metrics-grid" id="metrics"></div>
       </section>
 
+      <!-- ===== BENEFÍCIOS ===== -->
       <section class="section">
         <div class="container">
           <div class="section-head">
@@ -98,68 +225,138 @@
         </div>
       </section>
 
+      <!-- ===== TESTIMONIALS ===== -->
       <section class="section testimonials">
         <div class="container">
           <div class="section-head">
-            <p class="kicker">Prova social</p>
-            <h2>Quem veste, volta.</h2>
+            <p class="kicker">Quem veste, fala</p>
+            <h2>Mensagens reais de clientes Dom Winner.</h2>
+            <p class="section-lead testimonial-note">
+              ⚠️ Substituir os depoimentos abaixo por screenshots reais do WhatsApp dos seus clientes.
+              Por enquanto são placeholders — peça autorização e troque por mensagens verdadeiras.
+            </p>
           </div>
           <div class="cards" id="testimonials"></div>
         </div>
       </section>
 
+      <!-- ===== LEAD MAGNET (Brunson) ===== -->
+      <section id="guia" class="section section--lead">
+        <div class="container lead-card">
+          <div class="lead-text">
+            <p class="kicker">Material gratuito</p>
+            <h2>5 fits Dom Winner para começar com presença.</h2>
+            <p>
+              PDF com 5 combinações testadas: trabalho, casual, balada, evento e treino.
+              Cada fit com tabela de tamanho, sugestão de combinação e link direto pra pedir cada peça.
+            </p>
+            <ul class="lead-points">
+              <li>✓ 5 fits prontos pra copiar</li>
+              <li>✓ Tabela de medidas Dom Winner</li>
+              <li>✓ Tabela de combinações com preços</li>
+            </ul>
+          </div>
+          <form class="lead-form" id="lead-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- ⚠️ Trocar key abaixo por uma específica do Dom Winner em web3forms.com -->
+            <input type="hidden" name="access_key" value="ca8c9dfd-0c28-4da2-8f68-9fa61ec0a004" />
+            <input type="hidden" name="subject" value="Lead Magnet Dom Winner — 5 fits" />
+            <input type="hidden" name="from_name" value="Dom Winner Lead Magnet" />
+            <input type="hidden" name="redirect" value="https://wa.me/5511967969322?text=Recebi%20o%20guia%205%20fits%20da%20Dom%20Winner.%20Quero%20pedir%20uma%20peça." />
+            <label class="lead-field">
+              <span>Seu nome</span>
+              <input type="text" name="nome" required placeholder="Como se chama" />
+            </label>
+            <label class="lead-field">
+              <span>Seu WhatsApp</span>
+              <input type="tel" name="whatsapp" required placeholder="(11) 99999-9999" />
+            </label>
+            <label class="lead-field">
+              <span>Seu email</span>
+              <input type="email" name="email" required placeholder="seu@email.com" />
+            </label>
+            <button type="submit" class="btn btn-light">Receber agora</button>
+            <p class="lead-disclaimer">Sem spam. Você recebe o guia + condições especiais de drops.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ===== DROP DA SEMANA (Kennedy urgência) ===== -->
       <section class="section drops">
         <div class="container">
           <div class="section-head">
-            <p class="kicker">Lançamentos</p>
-            <h2>Drop da semana</h2>
+            <p class="kicker">Drop ativo</p>
+            <h2>Drop Black Confidence</h2>
+            <p class="section-lead">
+              Lote especial com peças premium. Termina quando vender ou em
+              <strong id="countdown-inline">--d --:--:--</strong>.
+            </p>
           </div>
           <div class="drop-grid" id="weekly-drop"></div>
         </div>
       </section>
 
-      <section class="section shipping">
-        <div class="container shipping-box">
-          <p class="kicker">Operação atual</p>
-          <h2>Vendas focadas em todo o Brasil.</h2>
-          <p>Atendimento direto com suporte para escolha da peça ideal e orientação de compra.</p>
-        </div>
-      </section>
-
+      <!-- ===== CTA FINAL ===== -->
       <section id="contato" class="cta">
         <div class="container cta-box">
-          <h2>Pronto para ativar o seu dom de vencer?</h2>
-          <p>Fale com a Dom Winner no WhatsApp e veja as peças disponíveis para o seu estilo.</p>
-          <a class="btn btn-light" href="#" id="cta-link">Falar no WhatsApp</a>
+          <p class="kicker kicker-light">Próximo passo</p>
+          <h2>Pronto para vestir<br /><em>quem você decidiu ser?</em></h2>
+          <p>Fala com a Dom Winner no WhatsApp. Atendimento direto, sem robô, sem demora.</p>
+          <div class="cta-actions">
+            <a class="btn btn-light" href="https://wa.me/5511967969322?text=Olá%2C%20quero%20conhecer%20os%20produtos%20da%20Dom%20Winner." id="cta-link">
+              Quero conhecer os produtos
+            </a>
+            <a class="btn btn-ghost" href="https://wa.me/5511967969322?text=Olá%2C%20quero%20saber%20preços%20e%20formas%20de%20pagamento%20da%20Dom%20Winner." target="_blank" rel="noopener">
+              Saber preço + pagamento
+            </a>
+          </div>
           <p class="whatsapp-number">WhatsApp oficial: <a href="https://wa.me/5511967969322" target="_blank" rel="noopener">+55 11 96796-9322</a></p>
+          <ul class="cta-seals">
+            <li>🛡️ 7 dias troca</li>
+            <li>🇧🇷 Envio Brasil</li>
+            <li>💬 Atendimento humano</li>
+            <li>★ 200+ clientes Dom Winner</li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container">
-        <p>DOM WINNER <span id="year"></span></p>
+      <div class="container footer-inner">
+        <p>DOM WINNER © <span id="year"></span> · Todos os direitos reservados</p>
+        <p class="footer-credit">
+          Site por <a href="https://fabytanaia-max.github.io/fabricio-tanaia-site/" target="_blank" rel="noopener">Fabrício Tanaia</a>
+        </p>
       </div>
     </footer>
 
+    <!-- ===== MODAL ===== -->
     <div class="modal" id="product-modal" aria-hidden="true">
       <div class="modal-box">
-        <button class="modal-close" id="modal-close" aria-label="Fechar">x</button>
+        <button class="modal-close" id="modal-close" aria-label="Fechar">×</button>
         <div class="modal-media" id="modal-media"></div>
         <div class="modal-content">
+          <p class="modal-category" id="modal-category"></p>
           <h3 id="modal-title"></h3>
+          <div class="modal-price" id="modal-price"></div>
           <p id="modal-description"></p>
+          <p class="modal-stock" id="modal-stock"></p>
           <ul class="modal-details" id="modal-details"></ul>
           <p class="modal-combine-title">Combine com</p>
           <div class="modal-combine" id="modal-combine"></div>
-          <a href="#" class="btn btn-light" id="modal-cta">Pedir no WhatsApp</a>
-          <button type="button" class="btn btn-ghost modal-close-secondary" id="modal-close-secondary">Fechar</button>
+          <div class="modal-actions">
+            <a href="#" class="btn btn-light" id="modal-cta-buy">Pedir no WhatsApp</a>
+            <a href="#" class="btn btn-ghost" id="modal-cta-info">Pedir mais fotos</a>
+            <a href="#" class="btn btn-ghost" id="modal-cta-size">Tabela de tamanhos</a>
+          </div>
+          <button type="button" class="btn btn-ghost btn-sm modal-close-secondary" id="modal-close-secondary">Fechar</button>
         </div>
       </div>
     </div>
 
-    <a href="#" id="floating-cta" class="floating-cta">WhatsApp</a>
+    <a href="https://wa.me/5511967969322?text=Olá%2C%20quero%20conhecer%20os%20produtos%20da%20Dom%20Winner." id="floating-cta" class="floating-cta" target="_blank" rel="noopener">
+      💬 WhatsApp
+    </a>
 
-    <script src="scripts.js"></script>
+    <script src="scripts.js?v=2"></script>
   </body>
 </html>
