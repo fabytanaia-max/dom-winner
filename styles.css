@@ -20,6 +20,9 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: Manrope, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 .container {
@@ -133,9 +136,20 @@ h1 {
   margin: 0.7rem auto 0.9rem;
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.02em;
-  font-size: clamp(2.6rem, 8vw, 6.4rem);
-  line-height: 0.95;
-  max-width: 11ch;
+  font-size: clamp(2.4rem, 7vw, 6rem);
+  line-height: 1.04;
+  max-width: 16ch;
+  padding-bottom: 0.08em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Hero h1 em (gradient text) — espaço pra não cortar descenders */
+.hero h1 em {
+  display: inline-block;
+  padding-bottom: 0.08em;
+  line-height: 1.06;
 }
 
 .lead {
@@ -218,6 +232,15 @@ h1 {
   font-size: clamp(2rem, 5vw, 3.3rem);
   font-weight: 400;
   letter-spacing: 0.02em;
+  line-height: 1.06;
+  padding-bottom: 0.06em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+.section-head h2 em {
+  display: inline-block;
+  padding-bottom: 0.06em;
+  line-height: 1.08;
 }
 
 .proof-note {
@@ -388,10 +411,12 @@ h1 {
 
 .manifesto h2 {
   margin: 0.5rem auto 0.7rem;
-  max-width: 16ch;
+  max-width: 22ch;
   font-family: 'Bebas Neue', sans-serif;
   font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 400;
+  line-height: 1.05;
+  padding-bottom: 0.06em;
 }
 
 .manifesto p {
@@ -1096,7 +1121,8 @@ h1 {
   font-size: 2rem;
   letter-spacing: 0.02em;
   color: var(--accent, #d9b36a);
-  line-height: 1;
+  line-height: 1.1;
+  padding-bottom: 0.05em;
 }
 .combo-savings {
   font-size: 0.82rem;
@@ -1427,4 +1453,139 @@ h1 {
 .footer-credit a:hover { border-bottom-color: var(--accent, #d9b36a); }
 @media (max-width: 720px) {
   .footer-inner { justify-content: center; text-align: center; }
+}
+
+/* ============================================================
+   v3 — Fixes globais de clipping (descenders, gradient, line-height)
+   ============================================================ */
+
+/* Defensive rule: todo heading com Bebas Neue precisa de padding-bottom
+   pra não cortar descenders (g/j/p/y) ou gradient text */
+.combo-card h3,
+.garantia-card h2,
+.founder-copy h2,
+.lead-text h2,
+.cta-box h2,
+.cta h2,
+.modal-content h3 {
+  line-height: 1.06;
+  padding-bottom: 0.06em;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Headings com gradient em (background-clip text) */
+.founder-copy h2 em,
+.lead-text h2 em,
+.cta-box h2 em,
+.cta h2 em {
+  display: inline-block;
+  padding-bottom: 0.06em;
+}
+
+/* Drop heading e card titles */
+.drop-main h3,
+.drop-side h3 {
+  line-height: 1.1;
+  padding-bottom: 0.05em;
+}
+
+/* Hero h1 — força quebra suave no mobile */
+@media (max-width: 540px) {
+  .hero h1 {
+    font-size: clamp(2rem, 9vw, 3.4rem);
+    max-width: 100%;
+    padding: 0 0.25rem 0.08em;
+  }
+  .hero .lead {
+    font-size: 0.96rem;
+    padding: 0 0.5rem;
+  }
+  .section-head h2 {
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    padding: 0 0.25rem 0.06em;
+  }
+  .container {
+    width: min(1140px, 94vw);
+  }
+  /* Topbar mais compacto no mobile */
+  .brand {
+    font-size: 1.4rem;
+    gap: 0.4rem;
+  }
+  .brand img {
+    width: 30px;
+    height: 30px;
+  }
+  /* Combos e garantia com padding ajustado */
+  .combo-card,
+  .garantia-card,
+  .lead-card {
+    padding: 1.5rem 1.25rem;
+  }
+  /* Selo da garantia menor */
+  .garantia-seal {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+  /* Modal mobile sem bordas estreitas demais */
+  .modal-content {
+    padding: 1.25rem;
+  }
+  /* Mantém announce bar sem quebra */
+  .announce-text {
+    font-size: 0.74rem;
+  }
+  .announce-countdown {
+    display: inline-block;
+    margin-top: 0.15rem;
+  }
+  /* CTA buttons mobile full-width */
+  .cta-actions .btn,
+  .modal-actions .btn {
+    flex: 1 1 100%;
+  }
+  /* Fix hero pills overflow */
+  .hero-pills {
+    justify-content: center;
+  }
+}
+
+/* Mobile pequeno: ainda mais compacto */
+@media (max-width: 380px) {
+  .hero h1 {
+    font-size: 1.85rem;
+    line-height: 1.06;
+  }
+  .menu {
+    gap: 0.7rem;
+  }
+}
+
+/* Garante que produtos e cards não causem overflow horizontal */
+.product-grid,
+.combos-grid,
+.cards,
+.bullets,
+.trust-grid,
+.metrics-grid {
+  max-width: 100%;
+}
+
+/* Hero não deve causar scroll horizontal */
+.hero {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Section padding lateral defensivo */
+.section,
+.cta {
+  padding-left: 0;
+  padding-right: 0;
+}
+.section .container,
+.cta .container {
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
