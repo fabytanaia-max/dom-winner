@@ -2,8 +2,26 @@
 
 const WHATSAPP_NUMBER = '5511967969322';
 
-// ⚠️ Atualize a data abaixo pro deadline real do drop atual
-const DROP_END_DATE = new Date('2026-06-15T23:59:59-03:00');
+// Drop deadline: 14 dias a partir do primeiro acesso (persiste no localStorage)
+// Quando rodar drop novo, troque a chave abaixo (ex: "drop-2026-q3-end") pra resetar.
+const DROP_KEY = 'dom-winner-drop-end-v1';
+const DROP_DURATION_DAYS = 14;
+
+function getDropEndDate() {
+  const stored = localStorage.getItem(DROP_KEY);
+  if (stored) {
+    const date = new Date(stored);
+    if (!isNaN(date.getTime()) && date > new Date()) return date;
+  }
+  // Cria nova data: 14 dias a partir de agora, fim do dia
+  const end = new Date();
+  end.setDate(end.getDate() + DROP_DURATION_DAYS);
+  end.setHours(23, 59, 59, 999);
+  localStorage.setItem(DROP_KEY, end.toISOString());
+  return end;
+}
+
+const DROP_END_DATE = getDropEndDate();
 
 // ============================================================
 // CONTENT
@@ -161,10 +179,10 @@ const content = {
   ],
 
   metrics: [
-    { value: '200+', label: 'clientes Dom Winner' },
-    { value: '4.8/5', label: 'média de satisfação' },
-    { value: '7 dias', label: 'garantia de troca' },
+    { value: 'Premium', label: 'tecidos selecionados' },
+    { value: '7 dias', label: 'troca incondicional' },
     { value: 'Brasil', label: 'envio nacional' },
+    { value: 'Direto', label: 'atendimento humano' },
   ],
 
   benefits: [
